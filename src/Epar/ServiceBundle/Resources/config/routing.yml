@@ -1,0 +1,3 @@
+epar_service_homepage:
+    path:     /
+    defaults: { _controller: EparServiceBundle:Default:index }
