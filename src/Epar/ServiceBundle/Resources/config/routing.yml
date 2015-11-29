@@ -5,3 +5,7 @@ epar_service_homepage:
 epar_ajax_ebay_login_sett:
     path: /user/ebayLogin
     defaults: { _controller: EparServiceBundle:User:ebayLogin }
+
+epar_ajax_ebay_proxy_sett:
+    path: /default/proxySettings
+    defaults: { _controller: EparServiceBundle:Default:proxySettings }
