@@ -13,6 +13,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 
+
 /**
  * @ORM\Entity
  * @ORM\Table(name="fos_user")
@@ -26,10 +27,11 @@ class User extends BaseUser
      */
     protected $id;
 
-
     public function __construct()
     {
         parent::__construct();
         // your own logic
     }
+
+
 }

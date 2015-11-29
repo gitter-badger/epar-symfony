@@ -1,3 +1,7 @@
 epar_service_homepage:
     path:     /
     defaults: { _controller: EparServiceBundle:Default:index }
+
+epar_ajax_ebay_login_sett:
+    path: /user/ebayLogin
+    defaults: { _controller: EparServiceBundle:User:ebayLogin }

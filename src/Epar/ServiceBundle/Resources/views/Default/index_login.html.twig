@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <a href="{{ path('fos_user_security_login') }}" class="btn raised large btn-primary">
+                {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+            </a>
+            <a href="{{ path('fos_user_registration_register') }}" class="btn raised large btn-success">
+                {{ 'layout.register'|trans({}, 'FOSUserBundle') }}
+            </a>
+        </div>
+    </div>
+{% endblock %}

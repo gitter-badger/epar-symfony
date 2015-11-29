@@ -16,19 +16,20 @@
 </head>
 <body class="login-bg">
 <div class="header">
-    <div class="container">
+    <div class="{% if app.user is null and not is_granted('IS_AUTHENTICATED_FULLY') %}container{% else %}header_top{% endif %}">
         <div class="row">
             <div class="col-md-12">
                 <!-- Logo -->
                 <div class="logo">
-                    <h1><a href="index.html">{{ site_name }}</a></h1>
+                    <h1><a href="{{ path('epar_service_homepage') }}">{{ site_name }}</a></h1>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
 
-<div class="page-content container">
+<div class="page-content {% if app.user is null and not is_granted('IS_AUTHENTICATED_FULLY') %}container{% endif %}">
     {% block body %}{% endblock %}
 </div>
 
@@ -38,5 +39,7 @@
 <script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bundles/eparservice/js/Epar.js') }}"></script>
+<script src="{{ asset('bundles/eparservice/js/User.js') }}"></script>
 </body>
 </html>

@@ -31,10 +31,15 @@ security:
         main:
             pattern: ^/
             form_login:
-                provider: fos_userbundle
+                provider:       fos_userbundle
+                login_path:     /login
+                use_forward:    false
+                check_path:     /login_check
+                failure_handler: ccdn_user_security.component.authentication.handler.login_failure_handler
                 csrf_provider: security.csrf.token_manager # Use form.csrf_provider instead for Symfony <2.4
 
-            logout:       true
+            logout:
+                path:   /logout
             anonymous:    true
 #            anonymous: ~
             # activate different ways to authenticate
