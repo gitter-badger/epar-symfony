@@ -1,0 +1,23 @@
+{
+  "name": "epar.local",
+  "homepage": "https://github.com/RomanGorbatko/epar",
+  "authors": [
+    "Roman Gorbatko <romangorbatko@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "static/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
